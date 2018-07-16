@@ -1,0 +1,90 @@
+{{template "pageStart.html" .}}
+<form class="form-horizontal admin-employee">
+  <div class="row form-group">
+    <label for="employeeNumber" class="col-lg-2 control-label text-right">Employee #</label>
+    <div class="col-lg-4">
+      <span>962134</span>
+    </div>
+    <label for="status" class="col-lg-2 control-label text-right">Status</label>
+    <div class="col-lg-4">
+      <div class="status view">
+        <div class="view">
+          <span>Active</span>
+          <span class="glyphicon glyphicon-pencil"></span>
+        </div>
+        <div class="edit">
+          <select name="status" id="status">
+            <option value="active">Active</option>
+            <option value="pending">Pending</option>
+            <option value="inactive">Inactive</option>
+          </select>
+          <button class="btn btn-xs">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <label for="firstName" class="col-lg-2 control-label text-right">Name</label>
+    <div class="col-lg-4">
+      <div class="name view">
+        <div class="view">
+          <span>Watson, Jennifer</span>
+          <span class="glyphicon glyphicon-pencil"></span>
+        </div>
+        <div class="edit">
+          <div class="col-lg-6">
+            <input type="text" id="firstName" name="firstName" class="form-control">
+          </div>
+          <div class="col-lg-6">
+            <input type="text" id="lastName" name="lastName" class="form-control">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row form-group">
+    <label for="startDate" class="col-lg-2 control-label text-right">Start Date</label>
+    <div class="col-lg-2">
+      <span>23-May-2002</span>
+    </div>
+    <label for="pto" class="control-label col-lg-2 col-lg-offset-2 text-right">PTO</label>
+    <div class="col-lg-3">
+      <div class="pto view">
+        <div class="view">
+          <span>30</span>
+          <span class="glyphicon glyphicon-pencil"></span>
+        </div>
+        <div class="edit">
+          <input type="number" id="pto" name="pto" class="form-control">
+          <button class="btn btn-xs">Save</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-1">
+      days
+    </div>
+  </div>
+  <div class="row form-group">
+    <label for="position" class="col-lg-2 control-label text-right">Position</label>
+    <div class="col-lg-2">
+      <div class="position view">
+        <div class="view">
+          <span>CEO</span>
+          <span class="glyphicon glyphicon-pencil"></span>
+        </div>
+        <div class="edit">
+          <select name="position" id="position" class="form-control">
+            <option value="CEO">CEO</option>
+            <option value="CTO">CTO</option>
+            <option value="COO">COO</option>
+            <option value="WorkerBee">Worker Bee</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-lg-offset-8">
+    <a href="#" role="button" class="btn btn-lg admin-primary">Done</a>
+  </div>
+</form>
+{{template "pageEnd.html" .}}

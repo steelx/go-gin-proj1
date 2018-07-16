@@ -1,0 +1,50 @@
+{{template "pageStart.html" .}}
+<form class="form-horizontal admin-employee">
+  <div class="row form-group">
+    <label for="employeeNumber" class="col-lg-2 control-label text-right">Employee #</label>
+    <div class="col-lg-4">
+      <span>new</span>
+    </div>
+    <label for="status" class="col-lg-2 control-label text-right">Status</label>
+    <div class="col-lg-4">
+      <span>new</span>
+    </div>
+  </div>
+  <div class="row form-group">
+    <label for="firstName" class="col-lg-2 control-label text-right">Name</label>
+    <div class="col-lg-2">
+      <input type="text" id="firstName" name="firstName" class="form-control">
+    </div>
+    <div class="col-lg-2">
+      <input type="text" id="lastName" name="lastName" class="form-control">
+    </div>
+  </div>
+  <div class="row form-group">
+    <label for="startDate" class="col-lg-2 control-label text-right">Start Date</label>
+    <div class="col-lg-2">
+      <input type="date" id="startDate" name="startDate" class="form-control">
+    </div>
+    <label for="pto" class="control-label col-lg-2 col-lg-offset-2 text-right">PTO</label>
+    <div class="col-lg-3">
+      <input type="number" id="pto" name="pto" class="form-control">
+    </div>
+    <div class="col-lg-1">
+      days
+    </div>
+  </div>
+  <div class="row form-group">
+    <label for="position" class="col-lg-2 control-label text-right">Position</label>
+    <div class="col-lg-2">
+      <select name="position" id="position" class="form-control">
+        <option value="CEO">CEO</option>
+        <option value="CTO">CTO</option>
+        <option value="COO">COO</option>
+        <option value="WorkerBee">Worker Bee</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-lg-3 col-lg-offset-8">
+    <button type="submit" class="btn btn-lg admin-primary">Create</button>
+  </div>
+</form>
+{{template "pageEnd.html" .}}

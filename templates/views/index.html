@@ -1,0 +1,12 @@
+{{template "pageStart.html" .}}
+<div class="main-menu">
+  <button class="btn col-lg-6 col-lg-offset-3 primary">Medical Benefits</button>
+  <button class="btn col-lg-6 col-lg-offset-3 primary">Dental Benefits</button>
+  <button class="btn col-lg-6 col-lg-offset-3 primary">Vision Benefits</button>
+  <button class="btn col-lg-6 col-lg-offset-3 primary">Retirement Benefits</button>
+  <button class="btn col-lg-6 col-lg-offset-3 primary-light">Vacation and Time Off</button>
+  {{if not .IsAdmin}}
+    <button class="btn col-lg-6 col-lg-offset-3 admin-primary">Administration</button>
+  {{end}}
+</div>
+{{template "pageEnd.html" .}}

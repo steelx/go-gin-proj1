@@ -1,0 +1,147 @@
+.title h1,
+.title h2 {
+  text-align: center;
+}
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+.btn {
+  color: #333;
+}
+.btn.primary {
+  background-color: #51b11d;
+  color: white;
+}
+.btn.primary:hover {
+  background-color: #65db26;
+  color: white;
+}
+.btn.primary-lighten-1 {
+  background-color: #b9e0a5;
+  color: #333;
+}
+.btn.primary-lighten-1:hover {
+  background-color: #9bd37f;
+  color: #333;
+}
+.btn.admin-primary {
+  background-color: #ffbf00;
+}
+.btn.admin-primary:hover {
+  background-color: #ffcc33;
+}
+.btn.admin-primary-lighten-1 {
+  background-color: #ffd966;
+}
+.btn.admin-primary-lighten-1:hover {
+  background-color: #ffe699;
+}
+.login {
+  margin-top: 10%;
+}
+.login .panel-heading {
+  background-color: #b9e0a5;
+}
+.login-info {
+  position: absolute;
+  top: 3em;
+  right: 3em;
+  text-align: right;
+}
+.main-menu {
+  margin-top: 5%;
+}
+.main-menu button {
+  font-size: 3rem;
+  padding: 0.5rem;
+  margin-top: 3rem;
+}
+.vacation-overview .view-menu ul {
+  list-style-type: none;
+}
+.vacation-overview .view-menu ul li {
+  font-size: 2.5rem;
+  display: block;
+  padding-top: 1.2rem;
+  height: 6rem;
+}
+.vacation-overview .view-menu ul li.active {
+  font-weight: bold;
+  background-color: #51b11d;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  position: relative;
+}
+.vacation-overview .view-menu ul li.active:after {
+  content: ' ';
+  position: absolute;
+  right: -3rem;
+  width: 6rem;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  top: 0;
+  height: 100%;
+  background-color: #51b11d;
+}
+.vacation-overview .table {
+  margin-top: 3rem;
+}
+.vacation-overview .table .header {
+  font-weight: bold;
+}
+.vacation-overview .table .header.row {
+  margin: 0;
+}
+.vacation-overview .table .row {
+  font-size: 1.8rem;
+  margin: 0.3rem 0;
+  padding: 0.8rem 0 0.6rem 0;
+}
+.vacation-overview .table .row:nth-child(2n+1) {
+  background-color: #d5e8d4;
+}
+.vacation-overview .table .row > div {
+  text-align: center;
+}
+.btn {
+  padding: 0.2rem 3rem;
+}
+.admin-overview .table {
+  margin-top: 3rem;
+}
+.admin-overview .table .header {
+  font-weight: bold;
+}
+.admin-overview .table .header.row {
+  margin: 0;
+}
+.admin-overview .table .row {
+  font-size: 1.8rem;
+  margin: 0.3rem 0;
+  padding: 0.8rem 0 0.6rem 0;
+}
+.admin-overview .table .row:nth-child(2n+1) {
+  background-color: #fff2cc;
+}
+.admin-overview .table .row > div {
+  text-align: center;
+}
+.admin-employee {
+  font-size: 1.8rem;
+}
+.admin-employee span {
+  position: relative;
+  top: 0.6rem;
+}
+.admin-employee .view .edit {
+  display: none;
+}
+.admin-employee .edit .view {
+  display: none;
+}
+.admin-employee .glyphicon {
+  font-size: 1.3rem;
+  cursor: pointer;
+}

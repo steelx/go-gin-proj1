@@ -1,0 +1,31 @@
+@import url(./_base);
+
+.table(@stripe-color: @base-bg-lighten-2) {
+  .header {
+    font-weight: bold;
+
+    &.row {
+      margin: 0;
+    }
+  }
+
+  .row {
+    font-size: 1.8rem;
+    margin: 0.3rem 0;
+    padding: 0.8rem 0 0.6rem 0;
+
+    &:nth-child(2n+1) {
+      background-color: @stripe-color;
+    }
+
+    & > div {
+      text-align: center;
+    }
+  }
+}
+
+.btn {
+
+  padding: 0.2rem 3rem;
+
+}

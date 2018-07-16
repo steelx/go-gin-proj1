@@ -1,0 +1,56 @@
+{{template "pageStart.html" .}}
+<div class="vacation-overview">
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li>Vacation and Time Off</li>
+    </ol>
+    <div class="col-lg-3 view-menu">
+      <ul class="text-center">
+        <li class="active">Overview</li>
+        <li>History</li>
+        <li>Policy</li>
+        <li>Holiday Calendar</li>
+      </ul>
+    </div>
+    <div class="col-lg-8 col-lg-offset-1">
+      <h2>Overview</h2>
+      <div class="col-lg-6">
+        <div class="col-lg-6 text-right">Available Time</div>
+        <div class="col-lg-6">16 Hours</div>
+        <div class="col-lg-6 text-right">Alloated Time</div>
+        <div class="col-lg-6">8 Hours</div>
+      </div>
+      <div class="col-lg-6">
+        <div class="col-lg-6 text-right">Annual Accrual</div>
+        <div class="col-lg-6">20 Days</div>
+      </div>
+      <div class="table col-lg-12" id="table">
+        <div class="row header col-lg-12">
+          <div class="col-lg-3">Dates</div>
+          <div class="col-lg-2">Hours</div>
+          <div class="col-lg-2">Reason</div>
+          <div class="col-lg-2">Status</div>
+          <div class="col-lg-3">
+            <button class="btn primary" id="add">Add</button>
+          </div>
+        </div>
+        {{range .TimesOff}}
+          <div class="row col-lg-12">
+            <div class="col-lg-3">{{.StartDate.Format "02-Jan"}}</div>
+            <div class="col-lg-2">{{.Amount}}</div>
+            <div class="col-lg-2">{{.Type}}</div>
+            <div class="col-lg-2">{{.Status}}</div>
+            <div class="col-lg-3">
+              <button class="btn primary" 
+              {{if eq .Status "Taken"}}
+              disabled
+              {{end}}
+              >Edit</button>
+            </div>
+          </div>
+        {{end}}
+      </div>
+    </div>
+</div>
+<script src="/public/js/vacationAdmin.js" charset="utf-8"></script>
+{{template "pageEnd.html" .}}

@@ -1,0 +1,39 @@
+@import url(_base);
+.vacation-overview {
+  .view-menu {
+    ul {
+      list-style-type: none;
+      li {
+        font-size: 2.5rem;
+        display: block;
+        padding-top: 1.2rem;
+        height: 6rem;
+
+        &.active {
+          font-weight: bold;
+          background-color: @base-bg;
+          border-top-left-radius: 0.5rem;
+          border-bottom-left-radius: 0.5rem;
+          position: relative;
+
+          &:after {
+            content: ' ';
+            position: absolute;
+            right: -3rem;
+            width: 6rem;
+            border-top-right-radius: 3rem;
+            border-bottom-right-radius: 3rem;
+            top:0;
+            height: 100%;
+            background-color: @base-bg;
+          }
+        }
+      }
+    }
+  }
+  .table {
+    margin-top: 3rem;
+    .table();
+  }
+
+}

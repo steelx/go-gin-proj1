@@ -1,0 +1,58 @@
+@import url(./_base);
+
+.title {
+  h1, h2 {
+    text-align: center;
+  }
+}
+
+html, body {
+  height: 100%;
+  position: relative;
+}
+
+.btn {
+  color: #333;
+
+  &.primary {
+    background-color: @base-bg;
+    color: white;
+
+    &:hover {
+      background-color: lighten(@base-bg, 10%);
+      color: white;
+    }
+  }
+  &.primary-lighten-1 {
+    background-color: @base-bg-lighten-1;
+    color: #333;
+
+    &:hover {
+      background-color: darken(@base-bg-lighten-1, 10%);
+      color: #333;
+    }
+  }
+
+  &.admin-primary {
+    background-color: @admin-base-bg;
+
+    &:hover {
+      background-color: lighten(@admin-base-bg, 10%);
+    }
+  }
+
+  &.admin-primary-lighten-1 {
+    background-color: @admin-base-bg-lighten-1;
+
+    &:hover {
+      background-color: lighten(@admin-base-bg-lighten-1, 10%);
+    }
+  }
+}
+
+@import url(./_login);
+@import url(./_loginInfo);
+@import url(./_mainMenu);
+@import url(./_vacationOverview);
+@import url(./_adminOverview);
+@import url(./_adminEmployee);
