@@ -1,6 +1,9 @@
 package app
 
-import "time"
+import (
+	"encoding/json"
+	"time"
+)
 
 var employees = map[string]Employee{
 	"962134": Employee{
@@ -43,17 +46,17 @@ var TimesOff = map[string][]TimeOff{
 	"962134": []TimeOff{
 		{
 			Type:      "Holiday",
-			Amount:    8.,
+			Amount:    "8",
 			StartDate: time.Date(2016, 1, 1, 0, 0, 0, 0, time.UTC),
 			Status:    "Taken",
 		}, {
 			Type:      "PTO",
-			Amount:    16.,
+			Amount:    "16",
 			StartDate: time.Date(2016, 8, 16, 0, 0, 0, 0, time.UTC),
 			Status:    "Scheduled",
 		}, {
 			Type:      "PTO",
-			Amount:    16.,
+			Amount:    "16",
 			StartDate: time.Date(2016, 12, 8, 0, 0, 0, 0, time.UTC),
 			Status:    "Requested",
 		},
@@ -72,8 +75,8 @@ type Employee struct {
 }
 
 type TimeOff struct {
-	Type      string
-	Amount    float32
-	StartDate time.Time
-	Status    string
+	Type      string      `json:"reason"`
+	Amount    json.Number `json:"hours"`
+	StartDate time.Time   `json:"startDate"`
+	Status    string      `json:"status"`
 }
